@@ -15,45 +15,45 @@ import java.applet.*;
 
 public class Checkers extends Applet {
 
-	private static final long serialVersionUID = 1L;
+ private static final long serialVersionUID = 1L;
 
-	/* The main applet class only lays out the applet.  The work of
+ /* The main applet class only lays out the applet.  The work of
       the game is all done in the CheckersCanvas object.   Note that
       the Buttons and Label used in the applet are defined as 
       instance variables in the CheckersCanvas class.  The applet
       class gives them their visual appearance and sets their
       size and positions.*/
 
-	public void init() {
+ public void init() {
 
-		setLayout(null);  // I will do the layout myself.
+  setLayout(null);  // I will do the layout myself.
 
-		setBackground(new Color(0,150,0));  // Dark green background.
+  setBackground(new Color(0,1,122));  // Dark green background.
 
-		/* Create the components and add them to the applet. */
+  /* Create the components and add them to the applet. */
 
-		CheckersCanvas board = new CheckersCanvas();
-		// Note: The constructor creates the buttons board.resignButton
-		// and board.newGameButton and the Label board.message.
-		add(board);
+  CheckersCanvas board = new CheckersCanvas();
+  // Note: The constructor creates the buttons board.resignButton
+  // and board.newGameButton and the Label board.message.
+  add(board);
 
-		board.newGameButton.setBackground(Color.lightGray);
-		add(board.newGameButton);
+  board.newGameButton.setBackground(Color.white);
+  add(board.newGameButton);
 
-		board.resignButton.setBackground(Color.lightGray);
-		add(board.resignButton);
+  board.resignButton.setBackground(Color.white);
+  add(board.resignButton);
 
-		board.message.setForeground(Color.green);
-		board.message.setFont(new Font("Serif", Font.BOLD, 14));
-		add(board.message);
+  board.message.setForeground(Color.red);
+  board.message.setFont(new Font("Serif, Font.BOLD, 15));
+  add(board.message);
 
-		/* Set the position and size of each component by calling
+  /* Set the position and size of each component by calling
          its setBounds() method. */
 
-		board.setBounds(20,20,164,164); // Note:  size MUST be 164-by-164 !
-		board.newGameButton.setBounds(210, 60, 100, 30);
-		board.resignButton.setBounds(210, 120, 100, 30);
-		board.message.setBounds(0, 200, 330, 30);
-	}
+  board.setBounds(20,20,164,164); // Note:  size MUST be 164-by-164 !
+  board.newGameButton.setBounds(210, 60, 100, 30);
+  board.resignButton.setBounds(210, 120, 100, 30);
+  board.message.setBounds(0, 200, 330, 30);
+ }
 
 } // end class Checkers
